@@ -1,0 +1,25 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.18t|$
+Arch|x86_64-msvc|$
+
+[PLUGINS]
+
+[INVALID]
+C:\Program Files\Java\jre1.8.0_191\bin\plugin2\npjp2.dll|$
+1540589257957|$
+C:\Program Files\Java\jre1.8.0_191\bin\dtplugin\npdeployJava1.dll|$
+1540589255405|$
+c:\Program Files\Microsoft Silverlight\5.1.50907.0\npctrlui.dll|$
+1493870522000|$
+c:\Program Files\Microsoft Silverlight\5.1.50907.0\npctrl.dll|$
+1493870522000|$
+C:\Users\User\AppData\Local\Microsoft\SkypeForBusinessPlugin\16.2.0.232\npGatewayNpapi-x64.dll|$
+1510986368000|$
+C:\Users\User\AppData\Local\Microsoft\SkypeForBusinessPlugin\16.2.0.232\npGatewayNpapi.dll|$
+1510986308000|$
+C:\Program Files\Microsoft Office\Office16\NPSPWRAP.DLL|$
+1438358232000|$
+C:\Users\User\AppData\Roaming\Zoom\bin\npzoomplugin.dll|$
+1536592119223|$
