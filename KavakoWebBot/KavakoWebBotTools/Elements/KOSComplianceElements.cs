@@ -121,7 +121,7 @@ namespace KavakoWebBotTools.Elements
         // ELEMENTO BANDEJA DE RESULTADOS "BANDEJA DE RESULTADOS" SECCIÓN INVESTIGACIÓN
         public IWebElement Investigacion_Bandeja(IWebDriver driver, string nombre)
         {
-            IWebElement funnel_Bandeja = driver.FindElement(By.XPath("//div[@id='click-info-card']/ul/li[2]/span[contains(text(),'" + nombre + "')]"));
+            IWebElement funnel_Bandeja = driver.FindElement(By.XPath($"//div[@id='click-info-card']/ul/li[2]/span[contains(text(),'{nombre}')]"));
             return funnel_Bandeja;
         }
 
@@ -129,11 +129,152 @@ namespace KavakoWebBotTools.Elements
         #region SECCIÓN "VIN" - INVESTIGACIÓN
 
         // ELEMENTO BANDEJA DE RESULTADOS "BANDEJA DE RESULTADOS" SECCIÓN INVESTIGACIÓN
-        public IWebElement Investigacion_Bandeja(IWebDriver driver, string nombre)
+        public IWebElement Investigacion_VIN_IconoVin(IWebDriver driver)
         {
-            IWebElement funnel_Bandeja = driver.FindElement(By.XPath("//div[@id='click-info-card']/ul/li[2]/span[contains(text(),'" + nombre + "')]"));
+            IWebElement funnel_Bandeja = driver.FindElement(By.XPath("//*[@id='main-content']/div/div[2]/div/div/app-stepper/div/span[1]/div"));
             return funnel_Bandeja;
         }
+
+        // ELEMENTO TEXTO DEL CAMPO "ESCRIBE EL NUMERO DE VIN"
+        public IWebElement Investigacion_VIN_EscribeNumeroVIN(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_EscribeNumeroVIN = driver.FindElement(By.XPath("//div[@id='main-content']/div/app-step-one/div/div[2]/app-question-form/form/div/div/app-input-copy-btn/label/input"));
+            return investigacion_VIN_EscribeNumeroVIN;
+        }
+
+        // ELEMENTO RADIO BUTTON "SI" - ¿EL VIN DE CARNET DE SERVICIO COINCIDE CON EL VIN DE CHASIS?
+        public IWebElement Investigacion_VIN_CoincideConChasis_Si(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_CoincideConChasisRadioBotonSi = driver.FindElement(By.XPath("//*[@id='mat-radio-2']/label/div[2]"));
+            return investigacion_VIN_CoincideConChasisRadioBotonSi;
+        }
+
+        // ELEMENTO RADIO BUTTON "NO" - ¿EL VIN DE CARNET DE SERVICIO COINCIDE CON EL VIN DE CHASIS?
+        public IWebElement Investigacion_VIN_CoincideConChasis_No(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_CoincideConChasis_No = driver.FindElement(By.XPath("//*[@id='mat-radio-3']/label/div[2]"));
+            return investigacion_VIN_CoincideConChasis_No;
+        }
+
+        // ELEMENTO CHECK BOX "SIN CHASIS" / "SIN CARNET" - ¿EL VIN DE CARNET DE SERVICIO COINCIDE CON EL VIN DE CHASIS?
+        public IWebElement Investigacion_VIN_CoincideConChasis_SinChasisSinCarnet(IWebDriver driver, string opcion)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath("//span[contains(text(),'" + opcion + "')]"));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO CHECK BOX "LINK NO ABRE" - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_LinkNoAbre(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_LinkNoAbre = driver.FindElement(By.XPath("//*[@id='check-question-two-not-open']/label/span[contains(text(),'LINK NO ABRE')]"));
+            return investigacion_VIN_REPUVE_LinkNoAbre;
+        }
+
+        // ELEMENTO RADIO BOTON "SI" ¿TIENE REPORTE DE ROBO ILÍCITO? - REPUVE
+        public IWebElement Investigacion_VIN__REPUVE_TieneReporteRoboIlicito_Si(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_TieneReporteRoboIlicito_Si = driver.FindElement(By.XPath("//*[@id='mat-radio-44']/label/div[2]"));
+            return investigacion_VIN_REPUVE_TieneReporteRoboIlicito_Si;
+        }
+
+        // ELEMENTO RADIO BOTON "NO" ¿TIENE REPORTE DE ROBO ILÍCITO? - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_No(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_TieneReporteRoboIlicito_No = driver.FindElement(By.XPath("//*[@id='mat-radio-45']/label/div[2]"));
+            return investigacion_VIN_REPUVE_TieneReporteRoboIlicito_No;
+        }
+
+        // ELEMENTO RADIO BOTON "SI" ¿EXISTE UNA PLACA REGISTRADA? - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si = driver.FindElement(By.XPath("//*[@id='mat-radio-47']/label/div[2]"));
+            return investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si;
+        }
+
+        // ELEMENTO RADIO BOTON "NO" ¿EXISTE UNA PLACA REGISTRADA? - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_ExistePlacaRegistrada_No(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_ExistePlacaRegistrada_No = driver.FindElement(By.XPath("//*[@id='mat-radio-48']/label/div[2]"));
+            return investigacion_VIN_REPUVE_ExistePlacaRegistrada_No;
+        }
+
+        // ELEMENTO RADIO BOTON "SI" ¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE CON EL DE REPUVE? - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_Si(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_CoincideConREPUVE_Si = driver.FindElement(By.XPath("//*[@id='mat-radio-50']/label/div[2]"));
+            return investigacion_VIN_REPUVE_CoincideConREPUVE_Si;
+        }
+
+        // ELEMENTO RADIO BOTON "NO" ¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE CON EL DE REPUVE? - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_No(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_CoincideConREPUVE_No = driver.FindElement(By.XPath("//*[@id='mat-radio-51']/label/div[2]"));
+            return investigacion_VIN_REPUVE_CoincideConREPUVE_No;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
+        // ELEMENTO 
+        public IWebElement Investigacion_VIN_(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+            return investigacion_VIN_;
+        }
+
 
         #endregion // FIN DE SECCIÓN "VIN" - INVESTIGACIÓN 
 
