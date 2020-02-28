@@ -179,6 +179,7 @@ namespace KavakoWebBotTools.Elements
         public IWebElement SubirDocumentoOfertaManual(IWebDriver driver)
         {
             IWebElement subirDocumentoOfertaManual = driver.FindElement(By.XPath("//input[@type='file']"));
+            //IWebElement subirDocumentoOfertaManual = driver.FindElement(By.XPath("//*[@id='mat-dialog-0']/app-workspace-dialog/mat-drawer-container/mat-drawer-content/section/div[4]/app-offer-manual-offer/div[3]/div[6]/div[1]/button"));
             return subirDocumentoOfertaManual;
         }
 

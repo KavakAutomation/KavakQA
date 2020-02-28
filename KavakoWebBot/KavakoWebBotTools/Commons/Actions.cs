@@ -80,6 +80,14 @@ namespace ChatBotSuitTools.Commons
             Thread.Sleep(1000);
         }
 
+        public void UpLoading(IWebElement driver, string path)
+        {
+            const string removeAttribute = @"document.getElementByXpath('browseButton').removeAttribute('disabled');";
+            ((IJavaScriptExecutor)driver).ExecuteScript(removeAttribute);
+            driver.Clear();
+            driver.SendKeys(path);
+        }
+
         public void ArchivoFileUploader(IWebDriver driver, string filePath)
         {
             String script = "document.getElementById('filetravelFile').value='" + filePath + "';";

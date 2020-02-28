@@ -118,78 +118,78 @@ namespace KavakoWebBotTools.Process
                             // VALIDAR SI SE EDITARAN DATOS DEL CLIENTE
                             if (objetosKOSWingman.EditarDatosCliente == "Si")
                             {
-                                try
-                                {
-                                    soporte.ObtenerEvidenciaCaso(driver, documento, "DAR CLIC AL ICONO DE 'EDITAR'", objetosLogin.CasoPrueba);
-                                    // DAR CLIC AL ICONO DE EDITAR
-                                    elementosKOSWingman.IconoEditarDatosCliente(driver).Click();
-                                    Thread.Sleep(sleepTimerFast);
-                                    try
-                                    {
-                                        soporte.ObtenerEvidenciaCaso(driver, documento, "SE INICIA CON LA EDICIÓN DE LOS DATOS DEL CLIENTE", objetosLogin.CasoPrueba);
+                                //try
+                                //{
+                                //    soporte.ObtenerEvidenciaCaso(driver, documento, "DAR CLIC AL ICONO DE 'EDITAR'", objetosLogin.CasoPrueba);
+                                //    // DAR CLIC AL ICONO DE EDITAR
+                                //    elementosKOSWingman.IconoEditarDatosCliente(driver).Click();
+                                //    Thread.Sleep(sleepTimerFast);
+                                //    try
+                                //    {
+                                //        soporte.ObtenerEvidenciaCaso(driver, documento, "SE INICIA CON LA EDICIÓN DE LOS DATOS DEL CLIENTE", objetosLogin.CasoPrueba);
 
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "NOMBRE" DEL CLIENTE
-                                        elementosKOSWingman.EditarNombreCliente(driver).Clear();
-                                        elementosKOSWingman.EditarNombreCliente(driver).SendKeys(objetosKOSWingman.NombreCliente);
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "APELLIDO" DEL CLIENTE
-                                        elementosKOSWingman.EditarApellidoCliente(driver).Clear();
-                                        elementosKOSWingman.EditarApellidoCliente(driver).SendKeys(objetosKOSWingman.ApellidoCliente);
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "TELEFONO" DEL CLIENTE
-                                        elementosKOSWingman.EditarTelefonoCliente(driver).Clear();
-                                        elementosKOSWingman.EditarTelefonoCliente(driver).SendKeys(objetosKOSWingman.TelefonoCliente);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "NOMBRE" DEL CLIENTE
+                                //        elementosKOSWingman.EditarNombreCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarNombreCliente(driver).SendKeys(objetosKOSWingman.NombreCliente);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "APELLIDO" DEL CLIENTE
+                                //        elementosKOSWingman.EditarApellidoCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarApellidoCliente(driver).SendKeys(objetosKOSWingman.ApellidoCliente);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "TELEFONO" DEL CLIENTE
+                                //        elementosKOSWingman.EditarTelefonoCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarTelefonoCliente(driver).SendKeys(objetosKOSWingman.TelefonoCliente);
 
-                                        // VALIDAR SI EL CLIENTE SERA ORGANICO "CHECK - CLIENTE ORGANICO" 
-                                        if (objetosKOSWingman.ClienteOrganico == "Si")
-                                        {
-                                            // DAR CLIC AL CHECK "CLIENTE ORGANICO"
-                                            elementosKOSWingman.EditarCheckBoxClienteOrganico(driver).Click();
-                                        }
+                                //        // VALIDAR SI EL CLIENTE SERA ORGANICO "CHECK - CLIENTE ORGANICO" 
+                                //        if (objetosKOSWingman.ClienteOrganico == "Si")
+                                //        {
+                                //            // DAR CLIC AL CHECK "CLIENTE ORGANICO"
+                                //            elementosKOSWingman.EditarCheckBoxClienteOrganico(driver).Click();
+                                //        }
 
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "CALLE" DEL CLIENTE
-                                        elementosKOSWingman.EditarCalleCliente(driver).Clear();
-                                        elementosKOSWingman.EditarCalleCliente(driver).SendKeys(objetosKOSWingman.EditarCalleCliente);
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "NÚMERO EXTERIOR" DEL CLIENTE
-                                        elementosKOSWingman.EditarNumeroExteriorCliente(driver).Clear();
-                                        elementosKOSWingman.EditarNumeroExteriorCliente(driver).SendKeys(objetosKOSWingman.EditarNumeroExterior);
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "NÚMERO INTERIOR" DEL CLIENTE
-                                        elementosKOSWingman.EditarNumeroInteriorCliente(driver).Clear();
-                                        elementosKOSWingman.EditarNumeroInteriorCliente(driver).SendKeys(objetosKOSWingman.EditarNumeroInterior);
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "COLONIA" DEL CLIENTE
-                                        elementosKOSWingman.EditarColoniaCliente(driver).Clear();
-                                        elementosKOSWingman.EditarColoniaCliente(driver).SendKeys(objetosKOSWingman.EditarColoniaCliente);
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "DELEGACIÓN" DEL CLIENTE
-                                        elementosKOSWingman.EditarDelegacionCliente(driver).Clear();
-                                        elementosKOSWingman.EditarDelegacionCliente(driver).SendKeys(objetosKOSWingman.EditarDelegacionCliente);
-                                        // LIMPIAR Y CAPTURAR EL CAMPO "CP" DEL CLIENTE
-                                        elementosKOSWingman.EditarCPCliente(driver).Clear();
-                                        elementosKOSWingman.EditarCPCliente(driver).SendKeys(objetosKOSWingman.EditarCPCliente);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "CALLE" DEL CLIENTE
+                                //        elementosKOSWingman.EditarCalleCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarCalleCliente(driver).SendKeys(objetosKOSWingman.EditarCalleCliente);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "NÚMERO EXTERIOR" DEL CLIENTE
+                                //        elementosKOSWingman.EditarNumeroExteriorCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarNumeroExteriorCliente(driver).SendKeys(objetosKOSWingman.EditarNumeroExterior);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "NÚMERO INTERIOR" DEL CLIENTE
+                                //        elementosKOSWingman.EditarNumeroInteriorCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarNumeroInteriorCliente(driver).SendKeys(objetosKOSWingman.EditarNumeroInterior);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "COLONIA" DEL CLIENTE
+                                //        elementosKOSWingman.EditarColoniaCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarColoniaCliente(driver).SendKeys(objetosKOSWingman.EditarColoniaCliente);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "DELEGACIÓN" DEL CLIENTE
+                                //        elementosKOSWingman.EditarDelegacionCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarDelegacionCliente(driver).SendKeys(objetosKOSWingman.EditarDelegacionCliente);
+                                //        // LIMPIAR Y CAPTURAR EL CAMPO "CP" DEL CLIENTE
+                                //        elementosKOSWingman.EditarCPCliente(driver).Clear();
+                                //        elementosKOSWingman.EditarCPCliente(driver).SendKeys(objetosKOSWingman.EditarCPCliente);
 
-                                        soporte.ObtenerEvidenciaCaso(driver, documento, "", objetosLogin.CasoPrueba);
+                                //        soporte.ObtenerEvidenciaCaso(driver, documento, "", objetosLogin.CasoPrueba);
 
-                                    }
-                                    catch
-                                    {
-                                        soporte.ObtenerEvidenciaCaso(driver, documento, "¡UUPS!, ALGO SALIO MAL, NO SE ENCONTRO EL ELEMENTO A EDITAR DE LA SECCIÓN 'DATOS DEL CLIENTE'", objetosLogin.CasoPrueba);
-                                        Thread.Sleep(sleepTimerFail);
+                                //    }
+                                //    catch
+                                //    {
+                                //        soporte.ObtenerEvidenciaCaso(driver, documento, "¡UUPS!, ALGO SALIO MAL, NO SE ENCONTRO EL ELEMENTO A EDITAR DE LA SECCIÓN 'DATOS DEL CLIENTE'", objetosLogin.CasoPrueba);
+                                //        Thread.Sleep(sleepTimerFail);
 
-                                        resultadoKOSWingman = false;
+                                //        resultadoKOSWingman = false;
 
-                                        // CERRAR NAVEGADOR
-                                        soporte.CerrarDriver(driver);
-                                        soporte.CerrarDocumento(documento);
-                                    }
-                                }
-                                catch
-                                {
-                                    soporte.ObtenerEvidenciaCaso(driver, documento, "¡UUPS!, ALGO SALIO MAL, NO SE ENCONTRO EL ELEMENTO ICONO 'EDITAR DATOS DEL CLIENTE'"+ elementosKOSWingman.IconoEditarDatosCliente(driver) + " ", objetosLogin.CasoPrueba);
-                                    Thread.Sleep(sleepTimerFail);
+                                //        // CERRAR NAVEGADOR
+                                //        soporte.CerrarDriver(driver);
+                                //        soporte.CerrarDocumento(documento);
+                                //    }
+                                //}
+                                //catch
+                                //{
+                                //    soporte.ObtenerEvidenciaCaso(driver, documento, "¡UUPS!, ALGO SALIO MAL, NO SE ENCONTRO EL ELEMENTO ICONO 'EDITAR DATOS DEL CLIENTE'"+ elementosKOSWingman.IconoEditarDatosCliente(driver) + " ", objetosLogin.CasoPrueba);
+                                //    Thread.Sleep(sleepTimerFail);
 
-                                    resultadoKOSWingman = false;
+                                //    resultadoKOSWingman = false;
 
-                                    // CERRAR NAVEGADOR
-                                    soporte.CerrarDriver(driver);
-                                    soporte.CerrarDocumento(documento);
-                                }
+                                //    // CERRAR NAVEGADOR
+                                //    soporte.CerrarDriver(driver);
+                                //    soporte.CerrarDocumento(documento);
+                                //}
                             } //  FIN DE LA EDICIÓN DE DATOS DEL CLIENTE
 
                             // VALIDAR SI SE REALIZARA LA "OFERTA MANUAL"
@@ -212,6 +212,15 @@ namespace KavakoWebBotTools.Process
                                         soporte.ScrollToElement(driver, elementosKOSWingman.FechaCalendario1OfertaManual(driver));
                                         Thread.Sleep(sleepTimerFast);
 
+                                        // SUBIR ARCHIVO
+                                        elementosKOSWingman.SubirDocumentoOfertaManual(driver).SendKeys(objetosKOSWingman.SubirDocumentoOfertaManual);
+
+                                        elementosKOSWingman.SubirDocumentoOfertaManual(driver).SendKeys(objetosKOSWingman.SubirDocumentoOfertaManual);
+                                        
+                                        //soporte.ArchivoFileUploader(driver, elementosKOSWingman.SubirDocumentoOfertaManual(driver), objetosKOSWingman.SubirDocumentoOfertaManual);
+                                        //String script = "document.getElementById('filetravelFile').value='" + objetosKOSWingman.SubirDocumentoOfertaManual + "';";
+                                        //((IJavaScriptExecutor)elementosKOSWingman.SubirDocumentoOfertaManual(driver)).ExecuteScript(script);
+
                                         soporte.ObtenerEvidenciaCaso(driver, documento, "CAPTURA LOS DATOS CORRESPONDIENTES A LA SECCIÓN DE 'OFERTA MANUAL'", objetosLogin.CasoPrueba);
 
                                         // LIMPIAR Y CAPTURAR EL CAMPO "COMENTARIO" DE LA OFERTA MANUAL
@@ -228,7 +237,6 @@ namespace KavakoWebBotTools.Process
                                         elementosKOSWingman.FechaCalendario1OfertaManual(driver).Click();
                                         Thread.Sleep(sleepTimerFast);
                                         elementosKOSWingman.FechaCalendario2OfertaManual(driver, objetosKOSWingman.FechaCalendarioOfertaManual).Click();
-
                                         soporte.ObtenerEvidenciaCaso(driver, documento, "", objetosLogin.CasoPrueba);
 
                                         Thread.Sleep(sleepTimerFast);

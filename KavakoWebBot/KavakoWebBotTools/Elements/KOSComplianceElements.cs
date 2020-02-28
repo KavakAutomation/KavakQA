@@ -177,6 +177,13 @@ namespace KavakoWebBotTools.Elements
             return investigacion_VIN_REPUVE_TieneReporteRoboIlicito_Si;
         }
 
+        // ELEMENTO BOTON "RECHAZAR INSPECCIÓN"
+        public IWebElement Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion = driver.FindElement(By.XPath("Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion"));
+            return investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion;
+        }
+
         // ELEMENTO RADIO BOTON "NO" ¿TIENE REPORTE DE ROBO ILÍCITO? - REPUVE
         public IWebElement Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_No(IWebDriver driver)
         {
@@ -184,11 +191,25 @@ namespace KavakoWebBotTools.Elements
             return investigacion_VIN_REPUVE_TieneReporteRoboIlicito_No;
         }
 
+
         // ELEMENTO RADIO BOTON "SI" ¿EXISTE UNA PLACA REGISTRADA? - REPUVE
         public IWebElement Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si(IWebDriver driver)
         {
             IWebElement investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si = driver.FindElement(By.XPath("//*[@id='mat-radio-47']/label/div[2]"));
             return investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si;
+        }
+
+        // ELEMENTO CAMPO DE TEXTO "PLACA" ¿EXISTE UNA PLACA REGISTRADA? - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Placa(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_ExistePlacaRegistrada_Placa = driver.FindElement(By.XPath("//div[2]/app-input-copy-btn/label/input"));
+            return investigacion_VIN_REPUVE_ExistePlacaRegistrada_Placa;
+        }
+        // ELEMENTO LISTA "ESTADO" ¿EXISTE UNA PLACA REGISTRADA? - REPUVE
+        public IWebElement Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Estado(IWebDriver driver)
+        {
+            IWebElement investigacion_VIN_REPUVE_ExistePlacaRegistrada_Estado = driver.FindElement(By.XPath("//div[@id='main-content']/div/app-step-one/div/div[2]/app-question-form/form/div[2]/div[3]/div[2]/label/select"));
+            return investigacion_VIN_REPUVE_ExistePlacaRegistrada_Estado;
         }
 
         // ELEMENTO RADIO BOTON "NO" ¿EXISTE UNA PLACA REGISTRADA? - REPUVE
@@ -212,68 +233,68 @@ namespace KavakoWebBotTools.Elements
             return investigacion_VIN_REPUVE_CoincideConREPUVE_No;
         }
 
-        // ELEMENTO 
+        // ELEMENTO RADIO BUTON "SI" "¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE CON EL DE REPUVE?" - REPUVE
         public IWebElement Investigacion_VIN_(IWebDriver driver)
         {
             IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
             return investigacion_VIN_;
         }
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        // ELEMENTO RADIO BUTON "NO" "¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE CON EL DE REPUVE?" - REPUVE
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        //// ELEMENTO 
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        //// ELEMENTO 
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        //// ELEMENTO 
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        //// ELEMENTO 
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        //// ELEMENTO 
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        //// ELEMENTO 
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
-        // ELEMENTO 
-        public IWebElement Investigacion_VIN_(IWebDriver driver)
-        {
-            IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
-            return investigacion_VIN_;
-        }
+        //// ELEMENTO 
+        //public IWebElement Investigacion_VIN_(IWebDriver driver)
+        //{
+        //    IWebElement investigacion_VIN_ = driver.FindElement(By.XPath(""));
+        //    return investigacion_VIN_;
+        //}
 
 
         #endregion // FIN DE SECCIÓN "VIN" - INVESTIGACIÓN 
