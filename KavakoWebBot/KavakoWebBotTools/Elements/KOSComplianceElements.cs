@@ -180,7 +180,7 @@ namespace KavakoWebBotTools.Elements
         // ELEMENTO BOTON "RECHAZAR INSPECCIÓN"
         public IWebElement Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion(IWebDriver driver)
         {
-            IWebElement investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion = driver.FindElement(By.XPath("Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion"));
+            IWebElement investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion = driver.FindElement(By.XPath("//*[@id='btn-shared-question-form-reject']"));
             return investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazarInspeccion;
         }
 

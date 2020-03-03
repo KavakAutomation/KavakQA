@@ -26,10 +26,6 @@ C:\Users\JOSUE-CRUZ\source\repos\KavakoWebBot\KavakoWebBotTools\bin\Debug\WebDri
 C:\Users\JOSUE-CRUZ\source\repos\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.csproj.CopyComplete
 C:\Users\JOSUE-CRUZ\source\repos\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.dll
 C:\Users\JOSUE-CRUZ\source\repos\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.pdb
-C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.csprojAssemblyReference.cache
-C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.csproj.CoreCompileInputs.cache
-C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.dll
-C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.pdb
 C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -53,4 +49,10 @@ C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\bin\
 C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\bin\Debug\WebDriver.xml
 C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\bin\Debug\WebDriver.Support.xml
+C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.Elements.KOS_Compliance.resources
+C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.csproj.GenerateResource.cache
+C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.csproj.CoreCompileInputs.cache
 C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.csproj.CopyComplete
+C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.dll
+C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.pdb
+C:\Users\JOSUE-CRUZ\Documents\GitHub\KavakQA\KavakoWebBot\KavakoWebBotTools\obj\Debug\KavakoWebBotTools.csprojAssemblyReference.cache

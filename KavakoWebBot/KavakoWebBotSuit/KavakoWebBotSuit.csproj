@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Apolo_01_VendeTuAuto.cs" />
     <Compile Include="KOS_01_Wingman.cs" />
+    <Compile Include="KOS_02_Compliance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

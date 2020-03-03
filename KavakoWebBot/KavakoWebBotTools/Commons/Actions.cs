@@ -179,14 +179,24 @@ namespace ChatBotSuitTools.Commons
 
         }
 
-        //public void Loading(IWebDriver driver, int timeMiliseconds)
-        //{
-        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(timeMiliseconds));
-        //    driver.Manage().Timeouts().ImplicitWait(TimeSpan.FromMilliseconds(timeMiliseconds));
-        //    Thread.Sleep(timeMiliseconds);
+        // ESPERAR A QUE EL ELEMENTO SEA VISIBLE
+        public void WaitForElementPresent(IWebDriver driver, string TypeElement, string NameElement)
+        {
+            switch (TypeElement)
+            {
+                case "XPath":
+                    new WebDriverWait(driver, TimeSpan.FromSeconds(9)).Until(ExpectedConditions.ElementExists(By.XPath(NameElement)));
+                    break;
 
-        //    //new WebDriverWait(driver, TimeSpan.FromSeconds(sleepTimerSlow)).Until(ExpectedConditions.ElementExists(By.XPath("//li[1]/a/div/div/div/div/div")));
-        //}
+                case "Id":
+                    new WebDriverWait(driver, TimeSpan.FromSeconds(9)).Until(ExpectedConditions.ElementExists(By.Id(NameElement)));
+                    break;
+
+                case "Name":
+                    new WebDriverWait(driver, TimeSpan.FromSeconds(9)).Until(ExpectedConditions.ElementExists(By.Name(NameElement)));
+                    break;
+            }
+        }
 
         public void Loading(IWebElement elemento)
         {
@@ -196,15 +206,217 @@ namespace ChatBotSuitTools.Commons
             }
         }
 
-        //public void Loading(IWebDriver driver)
-        //{
-        //    IWebElement backGroundProcess = driver.FindElement(By.Id("BackProcess"));
-        //    IWebElement backGroundProcessImage = driver.FindElement(By.Id("BackProcessImg"));
+        public void Click(IWebDriver driver, string TypeElement, string NameElement)
+        {
+            switch (TypeElement)
+            {
+                case "XPath":
+                    var waitXPath = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementXPath = waitXPath.Until(x => x.FindElement(By.XPath(NameElement)));
+                    if (myElementXPath.Displayed && myElementXPath.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        driver.FindElement(By.XPath(NameElement)).Click();
+                    }
 
-        //    while (backGroundProcess.Displayed || backGroundProcessImage.Displayed)
-        //    {
-        //        Thread.Sleep((int)TimerSleepType.sleepTimerFast);
-        //    }
-        //}
+                break;
+                case "Id":
+                    var waitId = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementId = waitId.Until(x => x.FindElement(By.Id(NameElement)));
+                    if (myElementId.Displayed && myElementId.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        driver.FindElement(By.Id(NameElement)).Click();
+                    }
+
+                break;
+                case "Name":
+                    var waitName = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementName = waitName.Until(x => x.FindElement(By.Name(NameElement)));
+                    if (myElementName.Displayed && myElementName.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        driver.FindElement(By.Name(NameElement)).Click();
+                    }
+
+                    break;
+            }
+
+
+        }
+
+        public void ClickWithOption(IWebDriver driver, string NameElement, string Opcion)
+        {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+            var myElement = wait.Until(x => x.FindElement(By.XPath(NameElement + Opcion + "')]")));
+            if (myElement.Displayed && myElement.Enabled)
+            {
+                Thread.Sleep(900);
+                driver.FindElement(By.XPath(NameElement + Opcion + "')]")).Click();
+            }
+
+        }
+
+        public void SendText(IWebDriver driver, string TypeElement, string NameElement, string Opcion)
+        {
+            switch (TypeElement)
+            {
+                case "XPath":
+                    var waitXPath = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementXPath = waitXPath.Until(x => x.FindElement(By.XPath(NameElement)));
+                    if (myElementXPath.Displayed && myElementXPath.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        driver.FindElement(By.XPath(NameElement)).Clear();
+                        driver.FindElement(By.XPath(NameElement)).SendKeys(Opcion);
+                    }
+                    break;
+
+                case "Id":
+                    var waitId = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementId = waitId.Until(x => x.FindElement(By.Id(NameElement)));
+                    if (myElementId.Displayed && myElementId.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        driver.FindElement(By.Id(NameElement)).Clear();
+                        driver.FindElement(By.Id(NameElement)).SendKeys(Opcion);
+                    }
+                    break;
+
+                case "Name":
+                    var waitName = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementName = waitName.Until(x => x.FindElement(By.Name(NameElement)));
+                    if (myElementName.Displayed && myElementName.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        driver.FindElement(By.Name(NameElement)).Clear();
+                        driver.FindElement(By.Name(NameElement)).SendKeys(Opcion);
+                    }
+                    break;
+            }
+        }
+
+        public void SendTextWithOption(IWebDriver driver, string NameElement, string Option)
+        {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+            var myElement = wait.Until(x => x.FindElement(By.XPath(NameElement + Option + "')]")));
+            if (myElement.Displayed && myElement.Enabled)
+            {
+                Thread.Sleep(900);
+                driver.FindElement(By.XPath(NameElement + Option + "')]")).Clear();
+                driver.FindElement(By.XPath(NameElement + Option + "')]")).SendKeys(Option);
+            }
+        }
+
+        // SELECCIONAR CAMPO "LISTA" POR TEXTO
+        public void SelectOpcionByText(IWebDriver driver, string TypeElement, string NameElement, string Option)
+        {
+            switch (TypeElement)
+            {
+                case "XPath":
+                    var waitXPath = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementXPath = waitXPath.Until(x => x.FindElement(By.XPath(NameElement)));
+                    if (myElementXPath.Displayed && myElementXPath.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.XPath(NameElement))).SelectByText(Option);
+                    }
+                    break;
+
+                case "Id":
+                    var waitId = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementId = waitId.Until(x => x.FindElement(By.Id(NameElement)));
+                    if (myElementId.Displayed && myElementId.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.Id(NameElement))).SelectByText(Option);
+                    }
+                    break;
+
+                case "Name":
+                    var waitName = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementName = waitName.Until(x => x.FindElement(By.Name(NameElement)));
+                    if (myElementName.Displayed && myElementName.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.Name(NameElement))).SelectByText(Option);
+                    }
+                    break;
+            }
+        }
+
+        // SELECCIONAR CAMPO "LISTA" POR VALOR
+        public void SelectOpcionByValue(IWebDriver driver, string TypeElement, string NameElement, string Option)
+        {
+            switch (TypeElement)
+            {
+                case "XPath":
+                    var waitXPath = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementXPath = waitXPath.Until(x => x.FindElement(By.XPath(NameElement)));
+                    if (myElementXPath.Displayed && myElementXPath.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.XPath(NameElement))).SelectByValue(Option);
+                    }
+                    break;
+
+                case "Id":
+                    var waitId = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementId = waitId.Until(x => x.FindElement(By.Id(NameElement)));
+                    if (myElementId.Displayed && myElementId.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.Id(NameElement))).SelectByValue(Option);
+                    }
+                    break;
+
+                case "Name":
+                    var waitName = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementName = waitName.Until(x => x.FindElement(By.Name(NameElement)));
+                    if (myElementName.Displayed && myElementName.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.Name(NameElement))).SelectByValue(Option);
+                    }
+                    break;
+            }
+        }
+
+        // SELECCIONAR CAMPO "LISTA" POR INDEX
+        public void SelectOpcionByValue(IWebDriver driver, string TypeElement, string NameElement, int Option)
+        {
+            switch (TypeElement)
+            {
+                case "XPath":
+                    var waitXPath = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementXPath = waitXPath.Until(x => x.FindElement(By.XPath(NameElement)));
+                    if (myElementXPath.Displayed && myElementXPath.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.XPath(NameElement))).SelectByIndex(Option);
+                    }
+                    break;
+
+                case "Id":
+                    var waitId = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementId = waitId.Until(x => x.FindElement(By.Id(NameElement)));
+                    if (myElementId.Displayed && myElementId.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.Id(NameElement))).SelectByIndex(Option);
+                    }
+                    break;
+
+                case "Name":
+                    var waitName = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                    var myElementName = waitName.Until(x => x.FindElement(By.Name(NameElement)));
+                    if (myElementName.Displayed && myElementName.Enabled)
+                    {
+                        Thread.Sleep(900);
+                        new SelectElement(driver.FindElement(By.Name(NameElement))).SelectByIndex(Option);
+                    }
+                    break;
+            }
+        }
     }
 } // FIN DEL PUBLIC CLASS
