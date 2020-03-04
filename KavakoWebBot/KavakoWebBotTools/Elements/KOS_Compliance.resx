@@ -205,7 +205,7 @@
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "RAPI"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_CargarRespaldoREPUVE" xml:space="preserve">
-    <value>//*[@id='main-content']/div/app-step-one/div/div[2]/app-question-form/form/div[2]/app-upload-btn/button/div</value>
+    <value>//button[@type='button']/div[1]</value>
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Estado" xml:space="preserve">
@@ -213,7 +213,7 @@
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_ExistePlacaRegistrada_No" xml:space="preserve">
-    <value>//*[@id='mat-radio-48']/label/div[2]</value>
+    <value>//*[text()='¿EXISTE UNA PLACA REGISTRADA?']//following::*[text()='NO'][1]</value>
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Placa" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si" xml:space="preserve">
-    <value>//*[@id='mat-radio-47']/label/div[2]</value>
+    <value>//*[text()='¿EXISTE UNA PLACA REGISTRADA?']//following::*[text()='SÍ'][1]</value>
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_LinkNoAbre" xml:space="preserve">
@@ -229,11 +229,11 @@
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_No" xml:space="preserve">
-    <value>//*[@id='mat-radio-51']/label/div[2]</value>
+    <value>//*[contains(text(),'¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE')]//following::*[text()='NO'][1]</value>
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_Si" xml:space="preserve">
-    <value>//*[@id='mat-radio-50']/label/div[2]</value>
+    <value>//*[contains(text(),'¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE')]//following::*[text()='SÍ'][1]</value>
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazar" xml:space="preserve">
@@ -241,11 +241,11 @@
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_No" xml:space="preserve">
-    <value>//*[@id='mat-radio-45']/label/div[2]</value>
+    <value>//*[text()='¿TIENE REPORTE DE ROBO ILÍCITO?']//following::*[text()='NO'][1]</value>
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_Si" xml:space="preserve">
-    <value>//*[@id='mat-radio-59']</value>
+    <value>//*[text()='¿TIENE REPORTE DE ROBO ILÍCITO?']//following::*[text()='SÍ'][1]</value>
     <comment>SECCIÓN "INVESTIGACIÓN" - "VIN" - "REPUVE"</comment>
   </data>
   <data name="Investigacion_VIN_Siguiente" xml:space="preserve">

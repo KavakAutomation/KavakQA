@@ -259,7 +259,7 @@ namespace KavakoWebBotTools.Elements {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a //*[@id=&apos;main-content&apos;]/div/app-step-one/div/div[2]/app-question-form/form/div[2]/app-upload-btn/button/div.
+        ///   Busca una cadena traducida similar a //button[@type=&apos;button&apos;]/div[1].
         /// </summary>
         internal static string Investigacion_VIN_REPUVE_CargarRespaldoREPUVE {
             get {
@@ -277,7 +277,7 @@ namespace KavakoWebBotTools.Elements {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a //*[@id=&apos;mat-radio-48&apos;]/label/div[2].
+        ///   Busca una cadena traducida similar a //*[text()=&apos;¿EXISTE UNA PLACA REGISTRADA?&apos;]//following::*[text()=&apos;NO&apos;][1].
         /// </summary>
         internal static string Investigacion_VIN_REPUVE_ExistePlacaRegistrada_No {
             get {
@@ -295,7 +295,7 @@ namespace KavakoWebBotTools.Elements {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a //*[@id=&apos;mat-radio-47&apos;]/label/div[2].
+        ///   Busca una cadena traducida similar a //*[text()=&apos;¿EXISTE UNA PLACA REGISTRADA?&apos;]//following::*[text()=&apos;SÍ&apos;][1].
         /// </summary>
         internal static string Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si {
             get {
@@ -313,7 +313,7 @@ namespace KavakoWebBotTools.Elements {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a //*[@id=&apos;mat-radio-51&apos;]/label/div[2].
+        ///   Busca una cadena traducida similar a //*[contains(text(),&apos;¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE&apos;)]//following::*[text()=&apos;NO&apos;][1].
         /// </summary>
         internal static string Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_No {
             get {
@@ -322,7 +322,7 @@ namespace KavakoWebBotTools.Elements {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a //*[@id=&apos;mat-radio-50&apos;]/label/div[2].
+        ///   Busca una cadena traducida similar a //*[contains(text(),&apos;¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE&apos;)]//following::*[text()=&apos;SÍ&apos;][1].
         /// </summary>
         internal static string Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_Si {
             get {
@@ -340,7 +340,7 @@ namespace KavakoWebBotTools.Elements {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a //*[@id=&apos;mat-radio-45&apos;]/label/div[2].
+        ///   Busca una cadena traducida similar a //*[text()=&apos;¿TIENE REPORTE DE ROBO ILÍCITO?&apos;]//following::*[text()=&apos;NO&apos;][1].
         /// </summary>
         internal static string Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_No {
             get {
@@ -349,7 +349,7 @@ namespace KavakoWebBotTools.Elements {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a //*[@id=&apos;mat-radio-59&apos;].
+        ///   Busca una cadena traducida similar a //*[text()=&apos;¿TIENE REPORTE DE ROBO ILÍCITO?&apos;]//following::*[text()=&apos;SÍ&apos;][1].
         /// </summary>
         internal static string Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_Si {
             get {

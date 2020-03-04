@@ -92,6 +92,9 @@ namespace KavakoWebBotTools.Process
                 ChromeOptions opciones = new ChromeOptions();
                 //ChromeDriverService path = ChromeDriverService.CreateDefaultService(Path.GetFullPath("..\\..\\..\\KavakoWebBotTools\\Commons\\Navegadores\\"));
                 //opciones.AddArguments("-incognito");
+                
+                //opciones.AddArguments("headless"); //Este funciona para que no se visualice la ventana de navegacion
+
                 //opciones.AddArguments("--disable-infobars");
                 //opciones.AddArguments("--disable-popup-bloking");
                 //opciones.AddArguments("-start-maximized");

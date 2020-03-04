@@ -217,12 +217,24 @@ namespace KavakoWebBotTools.Process
                 soporte.CerrarDocumento(documento);
             }
 
+            // VALIDAR QUE EXISTA EL BOTÓN 'RECHAZAR INSPECCIÓN'
+
+            if (driver.FindElement(By.XPath(KOS_Compliance.Investigacion_VIN_REPUVE_TieneReporteRoboIlicito_BotonRechazar)).Displayed)
+            {
+
+            }
+            else
+            {
+
+            }
+
             // VALIDA LA SELECCIÓN DE LA PREGUNTA '¿EXISTE UNA PLACA REGISTRADA?'
             if (objetosComplians.Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si == "Si")
             {
                 // SELECCIONA LA OPCIÓN 'SI' CORRESPONDIENTE A LA PREGUNTA '¿EXISTE UNA PLACA REGISTRADA?'
                 try
                 {
+                    soporte.Click(driver, "XPath", KOS_Compliance.Investigacion_VIN_REPUVE_ExistePlacaRegistrada_No);
                     soporte.Click(driver, "XPath", KOS_Compliance.Investigacion_VIN_REPUVE_ExistePlacaRegistrada_Si);
                     soporte.ObtenerEvidenciaCaso(driver, documento, "SELECCIONA LA OPCIÓN 'SI' CORRESPONDIENTE A LA PREGUNTA '¿EXISTE UNA PLACA REGISTRADA?'", objetosLogin.CasoPrueba);
                 }
@@ -271,8 +283,50 @@ namespace KavakoWebBotTools.Process
                     soporte.CerrarDocumento(documento);
                 }
             }
+
+            // CAPTURAR LA OPCIÓN 'SÍ' DE LA PREGUNTA CORRESPONDIENTE A '¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE CON EL DE REPUVE?'
+            try
+            {
+                soporte.Click(driver, "XPath", KOS_Compliance.Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_No);
+                soporte.Click(driver, "XPath", KOS_Compliance.Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_Si);
+                soporte.ObtenerEvidenciaCaso(driver, documento, "CAPTURAR LA OPCIÓN 'SÍ' DE LA PREGUNTA CORRESPONDIENTE A '¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE CON EL DE REPUVE?'", objetosLogin.CasoPrueba);
+            }
+            catch
+            {
+                soporte.ObtenerEvidenciaCaso(driver, documento, "¡OCURRIO UN PROBLEMA!, NO SE ENCONTRO LA OPCIÓN 'NO' " + KOS_Compliance.Investigacion_VIN_REPUVE_ModeloCoincideConREPUVE_No + "DE LA PREGUNTA CORRESPONDIENTE A '¿EL MODELO, LA VERSIÓN Y EL AÑO COTIZADO COINCIDE CON EL DE REPUVE?'", objetosLogin.CasoPrueba);
+                Thread.Sleep(sleepTimerFail);
+                resultadoKOSCompliance = false;
+                // CERRAR NAVEGADOR
+                soporte.CerrarDriver(driver);
+                soporte.CerrarDocumento(documento);
+            }
+
+            // 'CARGAR RESPALDO REPUVE'
+            try
+            {
+                soporte.ScrollToElement(driver, driver.FindElement(By.XPath(KOS_Compliance.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE)));
+                //driver.FindElement(By.XPath(KOS_Compliance.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE)).SendKeys(objetosComplians.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE);
+                soporte.SendKeyUpLoad(driver, objetosComplians.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE, KOS_Compliance.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE);
+                //soporte.UpLoading(driver.FindElement(By.XPath(KOS_Compliance.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE)), objetosComplians.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE);
+                //soporte.SendText(driver, "XPath", KOS_Compliance.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE, objetosComplians.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE);
+                soporte.ObtenerEvidenciaCaso(driver, documento, "CARGA RESPALDO REPUVE", objetosLogin.CasoPrueba);
+                
+            }
+            catch
+            {
+                soporte.ObtenerEvidenciaCaso(driver, documento, "¡OCURRIO UN PROBLEMA!, NO SE ENCONTRO LA OPCIÓN 'CARGA RESPALDO REPUVE' " + KOS_Compliance.Investigacion_VIN_REPUVE_CargarRespaldoREPUVE + "", objetosLogin.CasoPrueba);
+                Thread.Sleep(sleepTimerFail);
+                resultadoKOSCompliance = false;
+                // CERRAR NAVEGADOR
+                soporte.CerrarDriver(driver);
+                soporte.CerrarDocumento(documento);
+            }
+
             /////////////////////////
             resultadoKOSCompliance = true;
+            // CERRAR NAVEGADOR
+            soporte.CerrarDriver(driver);
+            soporte.CerrarDocumento(documento);
             #endregion
 
             #endregion

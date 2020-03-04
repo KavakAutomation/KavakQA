@@ -95,6 +95,15 @@ namespace ChatBotSuitTools.Commons
             ((IJavaScriptExecutor)driver).ExecuteScript(script);
         }
 
+        public void SendKeyUpLoad(IWebDriver driver, string value, string NameElement)
+        {
+            //IWebDriver driver;
+            //IWebElement element;
+            //String value;
+
+            IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
+            jse.ExecuteScript("arguments[0].value='" + value + "';", driver.FindElement(By.XPath(NameElement)));
+        }
         
         public void LimpiarInput(IWebElement elemento)
         {
@@ -418,5 +427,68 @@ namespace ChatBotSuitTools.Commons
                     break;
             }
         }
+
+        // VALIDAR EXISTENCIA DE UN ELEMENTO
+        //public bool ValidationElementEnabled(IWebDriver driver, string TypeElement, string NameElement)
+        //{
+        //    bool valElemento;
+        //    bool resultado;
+
+        //    switch (TypeElement)
+        //    {
+        //        case "XPath":
+        //            var waitXPath = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+        //            var myElementXPath = waitXPath.Until(x => x.FindElement(By.XPath(NameElement)));
+        //            try
+        //            {
+        //                valElemento = driver.FindElement(By.XPath(NameElement)).Displayed;
+        //                valElemento = driver.FindElement(By.XPath(NameElement)).Enabled;
+        //            }
+        //            catch
+        //            {
+        //                valElemento = false;
+        //            }
+        //            if (valElemento == true)
+        //            {
+        //                resultado = true;
+        //            }
+        //            else
+        //            {
+        //                resultado = false;
+        //            }
+        //            return resultado;
+        //            break;
+                //case "Id":
+                //    var waitId = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                //    var myElementId = waitId.Until(x => x.FindElement(By.Id(NameElement)));
+                //    if (myElementId.Displayed && myElementId.Enabled)
+                //    {
+                //        Thread.Sleep(900);
+                //        Visible = true;
+                //    }
+                //    else
+                //    {
+                //        Visible = false;
+                //    }
+
+                //    break;
+                //case "Name":
+                //    var waitName = new WebDriverWait(driver, TimeSpan.FromSeconds(40));
+                //    var myElementName = waitName.Until(x => x.FindElement(By.Name(NameElement)));
+                //    if (myElementName.Displayed && myElementName.Enabled)
+                //    {
+                //        Thread.Sleep(900);
+                //        Visible = true;
+                //    }
+                //    else
+                //    {
+                //        Visible = false;
+                //    }
+
+                //    break;
+
+            //}
+
+        //}
     }
 } // FIN DEL PUBLIC CLASS
